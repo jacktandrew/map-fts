@@ -55,7 +55,7 @@ div#info_panel .neighborhood h3 { color: #666; margin: 0; }
 .spot_info a { color: black; }
 
 /* MAP */
-div#map_box { width:100%; height: 100%; background: #aaa; position:absolute; top:0px; left:0; }
+div#map_box { display: none; width: 100%; height: 100%; background: #aaa; position:absolute; top:0px; left:0; }
 
 /* ADZ */
 div#ad_banner {

@@ -19,19 +19,19 @@ $(function(){
   var markers_by_id = {};
   var neighborhood_markers = {};
   var active_neighborhoods = {};
-  // var seattle = new google.maps.LatLng(47.61680985980715, -122.34203338623047);
-  //   var options = {
-  //     zoom: 12,
-  //     center: Seattle,
-  //     scrollwheel: false,
-  //     disableDefaultUI: true,
-  //     navigationControl: false,
-  //     navigationControlOptions: {
-  //         position: google.maps.ControlPosition.BOTTOM_LEFT
-  //     },
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+  var seattle = new google.maps.LatLng(47.61680985980715, -122.34203338623047);
+    var options = {
+      zoom: 12,
+      center: Seattle,
+      scrollwheel: false,
+      disableDefaultUI: true,
+      navigationControl: false,
+      navigationControlOptions: {
+          position: google.maps.ControlPosition.BOTTOM_LEFT
+      },
+     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById("map_box"), options);
+ map = new google.maps.Map(document.getElementById("map_box"), options);
   
   
   

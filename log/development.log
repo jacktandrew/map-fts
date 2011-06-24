@@ -9763,3 +9763,707 @@ Started GET "/pages/data.js" for 10.0.1.15 at 2011-06-24 11:44:02 -0700
   [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1
 Rendered pages/data.js.erb (485.1ms)
 Completed 200 OK in 517ms (Views: 472.2ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:05:29 -0700
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mNeighborhood Load (32.3ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2168755540__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 235ms (Views: 156.6ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:05:29 -0700
+  Processing by PagesController#data as JS
+  [1m[36mNeighborhood Load (3.0ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[35mAddress Load (2.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1
+  [1m[36mAddress Load (2.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1[0m
+  [1m[35mSpot Load (0.3ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1[0m
+  [1m[35mAddress Load (1.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1[0m
+  [1m[35mAddress Load (1.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1
+Rendered pages/data.js.erb (454.4ms)
+Completed 200 OK in 505ms (Views: 461.3ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:06:56 -0700
+  Processing by PagesController#home as HTML
+  [1m[36mNeighborhood Load (3.2ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2172056100__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 118ms (Views: 57.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:06:57 -0700
+  Processing by PagesController#data as JS
+  [1m[35mNeighborhood Load (3.4ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods"
+  [1m[36mAddress Load (2.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)[0m
+  [1m[35mSpot Load (0.3ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.3ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1
+  [1m[36mAddress Load (33.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1[0m
+  [1m[35mAddress Load (0.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (0.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1[0m
+  [1m[35mAddress Load (0.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1[0m
+  [1m[35mAddress Load (1.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1[0m
+  [1m[35mAddress Load (2.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1[0m
+Rendered pages/data.js.erb (327.6ms)
+Completed 200 OK in 363ms (Views: 286.1ms | ActiveRecord: 58.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:07:18 -0700
+  Processing by PagesController#home as HTML
+  [1m[35mNeighborhood Load (3.1ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2172097080__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 114ms (Views: 57.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:07:18 -0700
+  Processing by PagesController#data as JS
+  [1m[36mNeighborhood Load (2.6ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[35mAddress Load (1.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.3ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1
+  [1m[36mSpot Load (0.3ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.3ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1
+  [1m[36mAddress Load (1.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1
+  [1m[36mAddress Load (2.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1[0m
+  [1m[35mAddress Load (1.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1
+Rendered pages/data.js.erb (346.1ms)
+Completed 200 OK in 375ms (Views: 336.9ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:11:50 -0700
+  Processing by PagesController#home as HTML
+  [1m[36mNeighborhood Load (3.1ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2172123600__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 116ms (Views: 59.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:11:50 -0700
+  Processing by PagesController#data as JS
+  [1m[35mNeighborhood Load (6.4ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods"
+  [1m[36mAddress Load (2.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.3ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1[0m
+  [1m[35mAddress Load (1.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1[0m
+  [1m[35mAddress Load (2.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1[0m
+Rendered pages/data.js.erb (349.5ms)
+Completed 200 OK in 382ms (Views: 335.7ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:13:30 -0700
+  Processing by PagesController#home as HTML
+  [1m[35mNeighborhood Load (42.5ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2155424240__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (98.2ms)
+Completed 200 OK in 115ms (Views: 58.5ms | ActiveRecord: 44.8ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:13:30 -0700
+  Processing by PagesController#data as JS
+  [1m[36mNeighborhood Load (2.8ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[35mAddress Load (1.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)
+  [1m[36mSpot Load (0.3ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.3ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1
+  [1m[36mAddress Load (1.3ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1
+  [1m[36mAddress Load (2.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1[0m
+  [1m[35mAddress Load (1.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1[0m
+  [1m[35mAddress Load (1.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1
+Rendered pages/data.js.erb (348.2ms)
+Completed 200 OK in 379ms (Views: 338.0ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:14:12 -0700
+  Processing by PagesController#home as HTML
+  [1m[36mNeighborhood Load (42.1ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2155672680__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (97.4ms)
+Completed 200 OK in 114ms (Views: 58.0ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:14:12 -0700
+  Processing by PagesController#data as JS
+  [1m[35mNeighborhood Load (5.6ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods"
+  [1m[36mAddress Load (1.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1[0m
+  [1m[35mAddress Load (0.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1[0m
+  [1m[35mAddress Load (34.9ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1[0m
+  [1m[35mAddress Load (1.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1[0m
+  [1m[35mAddress Load (2.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1[0m
+Rendered pages/data.js.erb (327.3ms)
+Completed 200 OK in 369ms (Views: 283.1ms | ActiveRecord: 61.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-24 15:15:56 -0700
+  Processing by PagesController#home as HTML
+  [1m[35mNeighborhood Load (43.3ms)[0m  SELECT "neighborhoods".* FROM "neighborhoods" ORDER BY name
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 3))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 8))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 13))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 19))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 4))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 6))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 12))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 15))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 14))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 17))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 11))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 1))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 18))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 16))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 2))[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "spots" INNER JOIN "addresses" ON "spots".id = "addresses".spot_id WHERE (("addresses".neighborhood_id = 7))
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_pages_home_html_erb__4572895651922593269_2160662400__2199806340692393346 at /Users/Jack/projects/map-fts/app/views/pages/home.html.erb:28)
+Rendered pages/home.html.erb within layouts/application (98.4ms)
+Completed 200 OK in 115ms (Views: 57.9ms | ActiveRecord: 45.5ms)
+
+
+Started GET "/pages/data.js" for 127.0.0.1 at 2011-06-24 15:15:56 -0700
+  Processing by PagesController#data as JS
+  [1m[36mNeighborhood Load (2.8ms)[0m  [1mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[35mAddress Load (4.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 1)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 4) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 5) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 9) LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 2)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 6) LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 3)
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 13) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 30) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 10) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 6)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 23) LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 18) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 36) LIMIT 1
+  [1m[36mAddress Load (1.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 25) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 45) LIMIT 1
+  [1m[36mAddress Load (2.1ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 11)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 12) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 38) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 41) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 42) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 43) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 2) LIMIT 1
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 13)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 8) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 31) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 39) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 44) LIMIT 1[0m
+  [1m[35mAddress Load (1.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 14)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 11) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 26) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 28) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 29) LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 15)[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 14) LIMIT 1
+  [1m[36mSpot Load (0.2ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 37) LIMIT 1[0m
+  [1m[35mAddress Load (1.2ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 16)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 32) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 33) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 34) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 35) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 40) LIMIT 1[0m
+  [1m[35mAddress Load (1.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 17)
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 17) LIMIT 1[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 20) LIMIT 1
+  [1m[36mSpot Load (0.1ms)[0m  [1mSELECT "spots".* FROM "spots" WHERE ("spots"."id" = 21) LIMIT 1[0m
+  [1m[35mSpot Load (0.2ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 24) LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 18)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 19) LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE ("addresses".neighborhood_id = 19)[0m
+  [1m[35mSpot Load (0.1ms)[0m  SELECT "spots".* FROM "spots" WHERE ("spots"."id" = 22) LIMIT 1
+Rendered pages/data.js.erb (353.1ms)
+Completed 200 OK in 425ms (Views: 339.5ms | ActiveRecord: 27.0ms)
