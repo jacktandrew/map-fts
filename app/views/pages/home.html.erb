@@ -1,0 +1,29 @@
+<div id="left_nav">
+  <div id="geolocate">
+    <ul class="nav">  
+      <% @neighborhoods.each do |n| %>
+        <% unless n.spots.empty? %>
+          <li><a href="#" data-id="<%= n.id %>"><%= n.name %></a></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+<div id="info_panel">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, lectus eget lacinia feugiat, augue elit porttitor risus, nec pellentesque turpis tellus vel elit. In semper purus hendrerit augue tincidunt viverra. Pellentesque vel risus vitae massa aliquet malesuada eu ac diam. Vivamus vehicula diam a tellus accumsan imperdiet. Nunc lacus erat, fermentum vel malesuada ut, consectetur at enim. Praesent vitae auctor turpis. Nulla posuere, augue quis molestie lacinia, sem mi imperdiet nunc, et tempor urna nisi et tellus. Aenean accumsan malesuada sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus felis, vitae mattis leo. Sed sed fringilla dolor. Mauris tincidunt orci et dolor fermentum elementum. Phasellus molestie facilisis accumsan.
+  </p>
+
+  
+</div>
+  
+
+<% content_for :map do |m| %>
+  <div id="map_box"></div>
+<% end %>
+
+<%# build dynamic data structure%>
+<% content_for :javascripts do |j| %>
+<% end %>

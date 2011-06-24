@@ -1,0 +1,65 @@
+body { font-family: courier; padding: 0; margin:0 }
+
+h1,h2,h3 { font-family: Helvetica, Arial; }
+
+#content { overflow: auto; top:0; bottom:0px; left: 0; height: 100%; width: 100%; }
+
+/* background: #F2F3EC; */
+div#top_banner { z-index: 120;  height: 60px; position: fixed; min-width: 600px; }
+div#top_banner h1 { margin: 0; padding: 10px; float: left; color: #999; background: white url(/images/stripes.png) no-repeat -40px; padding-left: 60px; cursor: default; }
+div#top_banner div#top_nav { margin-top: 18px; margin-left: 20px; height: 30px; float: left; }
+div#top_banner div#top_nav ul { margin: 0; padding: 0; list-style-type: none; text-align: left; }
+div#top_banner div#top_nav ul li { display: inline; }
+div#top_banner div#top_nav ul li a { padding: .2em .5em; background: magenta; color: white }
+div#top_banner div#top_nav ul li a:hover { background: yellow; color: inherit; }
+div#top_banner div#top_nav ul li a.disabled { background: #ccc; color: black; }
+
+a { color: magenta; }
+a:hover { color: black; background: yellow; text-decoration: none; }
+
+
+div#left_nav { margin-top: 62px; width: 200px; position: relative; float: left; z-index: 110; }
+div#left_nav ul { margin: 0; padding: 0; list-style-type: none; }
+div#left_nav li { margin: 0 0 .2em 0; }
+div#left_nav a { display: block; font-size: .94em; }
+
+/* NAV */
+ul.nav li a { text-decoration:none; padding: .2em 1em .2em 1.8em; 
+  color: magenta; background-color: white; }
+ul.nav li a:hover { color: black; background-color: yellow; }
+ul.nav li a.active { background: #333 url(/images/icon_check.png) no-repeat 2px 0; color: #fff; }
+ul.nav li a.disabled { background-color: #999; color: #666; }
+
+
+/* div#container { height: 600px; } */
+
+div#info_panel {
+  margin-left: 13px; width: 207px;
+  z-index: 110; display: none;
+  top: 0; right: 0;
+  float: right; 
+  position: relative;
+}
+div#info_panel .neighborhood { margin-top: 10px; background: white; padding: 5px; }
+div#info_panel .neighborhood ul { margin: 0; padding: 0; list-style:none; }
+div#info_panel .neighborhood ul li { font-size: .84em; margin: .6em 0 0 0; display: block; }
+div#info_panel .neighborhood ul li a.active { color: black; background-color: yellow; text-decoration:none; }
+div#info_panel .neighborhood ul li ul.days_available { list-style: none; }
+div#info_panel .neighborhood ul li ul.days_available li { display: inline; color: #ccc; padding-right:2px; }
+div#info_panel .neighborhood ul li ul.days_available li.available { color: #000; }
+div#info_panel .neighborhood h3 { color: #666; margin: 0; }
+
+
+/* SPOT INFO */
+.spot_info { display: none; padding: 5px; margin: 5px 0; background: #f1f1f1; }
+.spot_info a { color: black; }
+
+/* MAP */
+div#map_box { width:100%; height: 100%; background: #aaa; position:absolute; top:0px; left:0; }
+
+/* ADZ */
+div#ad_banner {
+  position: fixed; bottom: 0; left: 0; width: 100%; height: 15px; z-index: 1000;  
+  padding: 0; margin: 0;
+}
+

@@ -1,0 +1,8 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Address: create, read, update, delete
+  Neighborhood: create, read, update, delete
+  Spot: create, read, update, delete

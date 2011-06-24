@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  neighborhood: 
+  spot: 
+  latitude: 9.99
+  longitude: 9.99
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  sunday: false
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+
+two:
+  neighborhood: 
+  spot: 
+  latitude: 9.99
+  longitude: 9.99
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  sunday: false
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false

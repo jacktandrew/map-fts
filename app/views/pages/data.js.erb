@@ -1,0 +1,7 @@
+var neighborhoods = <%= @neighborhoods.to_json(:include => {:addresses => {:include => :spot}}).html_safe %>
+
+var neighborhoods_by_id = {};
+$.each(neighborhoods, function(index, value){
+  var n = value.neighborhood;
+  neighborhoods_by_id[n.id] = n;
+});

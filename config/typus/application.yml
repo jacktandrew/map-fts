@@ -1,0 +1,35 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Address:
+  fields:
+    default: neighborhood, spot, latitude, longitude, address, city, state, zip, sunday, monday, tuesday, wednesday, thursday, friday, saturday
+    form: neighborhood, spot, latitude, longitude, address, city, state, zip, sunday, monday, tuesday, wednesday, thursday, friday, saturday
+    options:
+  order_by: 
+  relationships: neighborhood, spot
+  filters: 
+  search: 
+  application: fortruckssake
+
+Neighborhood:
+  fields:
+    default: name, latitude, longitude, zoom
+    form: name, latitude, longitude, zoom
+  order_by: 
+  relationships: 
+  filters: 
+  search: name
+  application: fortruckssake
+
+Spot:
+  fields:
+    default: name, phone, url
+    form: name, phone, url
+  order_by: 
+  relationships: 
+  filters: 
+  search: name
+  application: fortruckssake
+
